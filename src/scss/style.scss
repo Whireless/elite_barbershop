@@ -1,0 +1,20 @@
+@import "global";
+@import "container";
+
+// Шапка
+
+@import "blocks/main-header";
+@import "blocks/main-nav";
+
+// Основные блоки
+
+@import "blocks/about";
+@import "blocks/services";
+@import "blocks/advantages";
+@import "blocks/barbers";
+@import "blocks/gallery";
+@import "blocks/contacts";
+
+// Подвал
+
+@import "blocks/main-footer";

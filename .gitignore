@@ -1,0 +1,6 @@
+/build
+/server
+/node_modules
+
+.DS_Store
+.editorconfig // Убрать комментирование при разработке (Файл не нужен в репозитории)

@@ -1,0 +1,41 @@
+.gallery__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  margin: 44px auto 0 auto;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 708px;
+  }
+
+  @media (min-width: $laptop) {
+    width: max-content;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 50px;
+  }
+}
+
+.gallery__img {
+  object-fit: cover;
+
+  @media (min-width: $tablet) {
+    width: 339px;
+    height: 365px;
+  }
+
+  @media (min-width: $laptop) {
+    width: 267px;
+    height: 380px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 415px;
+    height: 610px;
+  }
+}

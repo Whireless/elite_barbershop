@@ -1,0 +1,139 @@
+.contacts {
+  scroll-margin-top: 3em;
+  color: $gold;
+  background: $darkblue url("../img/bg/mobile/contacts.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    background-position: 0;
+  }
+
+  @media (min-width: $laptop) {
+    background: $darkblue url("../img/bg/laptop/contacts.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0;
+  }
+}
+
+.contacts__title {
+  color: $whitesmoke;
+  margin: 0 auto;
+  width: max-content;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
+}
+
+.contacts__info {
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    column-gap: 120px;
+    margin-top: 30px;
+  }
+
+  @media (min-width: $laptop) {
+    margin-top: 45px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 60px;
+  }
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 40px 0;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    row-gap: 35px;
+  }
+}
+
+.contacts__item {
+  position: relative;
+  padding-left: 35px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--phone {
+    &::before {
+      background-image: url("../img/icons/phone.svg");
+    }
+  }
+
+  &--adress {
+    font-weight: 700;
+    &::before {
+      background-image: url("../img/icons/map-pin.svg");
+    }
+  }
+
+  a {
+    color: $gold;
+    text-decoration: none;
+    transition: 0.4s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 50px;
+
+    &::before {
+      top: -4px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.contacts__times {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  @media (min-width: $desktop) {
+    row-gap: 35px;
+  }
+}
+
+.contacts__work-time {
+  &::before {
+    top: 9px;
+    background-color: $gold;
+  }
+
+  @media (min-width: $laptop) {
+    &::before {
+      top: 12px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::before {
+      top: 13px;
+    }
+  }
+}

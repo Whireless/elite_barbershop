@@ -1,0 +1,145 @@
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+
+  @media (min-width: $tablet) {
+    padding: 35px 30px;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 40px 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 50px 120px;
+  }
+}
+
+.main-footer__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.main-footer__copyright {
+  color: $whitesmoke;
+  align-self: center;
+}
+
+.main-footer__list {
+  display: flex;
+  column-gap: 40px;
+  order: -1;
+
+  @media (min-width: $tablet) {
+    column-gap: 45px;
+    order: 1;
+  }
+
+  @media (min-width: $laptop) {
+    column-gap: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    column-gap: 80px;
+  }
+}
+
+.main-footer__link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &--vk {
+    background-image: url("../img/icons/vk.svg");
+  }
+
+  &--tg {
+    background-image: url("../img/icons/tg.svg");
+  }
+
+  @media (min-width: $desktop) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.main-footer__dev {
+  font-size: 13px;
+  line-height: 16px;
+  color: grey;
+  display: block;
+  margin: 0 auto;
+
+  a {
+    color: grey;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    order: 2;
+  }
+}
+
+.main-footer__button-up {
+  position: fixed;
+  right: 15px;
+  bottom: 87px;
+  display: block;
+  background-image: url("../img/icons/arrow.svg");
+  background-color: $black;
+  background-size: 65%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  border: 1px solid $gold;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.4s;
+  transform: scale(0);
+
+  &--visually {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  @media (min-width: $tablet) {
+    bottom: 75px;
+    right: 30px;
+  }
+
+  @media (min-width: $laptop) {
+    bottom: 90px;
+    right: 60px;
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    bottom: 100px;
+    right: 120px;
+    width: 70px;
+    height: 70px;
+  }
+}
